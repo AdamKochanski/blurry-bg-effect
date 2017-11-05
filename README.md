@@ -1,3 +1,6 @@
 # el_passion_recruitment
 
-missing font proxima nova regular
+
+Issues: 
+- missing font proxima nova regular (there is no free font)
+- no scrollbar formatting

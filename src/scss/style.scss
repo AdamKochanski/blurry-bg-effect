@@ -4,6 +4,7 @@ html {
 	background: url(../images/background.jpg) no-repeat center center fixed; 
 	background-size: cover;
 	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.4px;
 }
 
 
@@ -127,8 +128,8 @@ html {
 		ul {
 			li {
 				&.event{
-					padding: 10px;
-					margin: 10px;
+					padding: 10px 10px 10px 13px;
+					margin: 7px 3px 7px 10px;
 					background: white;
 					border: 1px solid #e0e0e0;
 					border-radius: 5px;
