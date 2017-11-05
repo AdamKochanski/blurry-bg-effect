@@ -1,0 +1,173 @@
+/* === Config === */
+/*@import "config/vars";
+@import "config/mixins";*/
+
+/* === Base === */
+/*@import "base/normalize";
+/*@import "base/base";*/
+/*@import "base/fonts";
+@import "base/typography";*/
+
+/* === Helpers === */
+/*@import "helpers/misc";
+@import "helpers/buttons";
+@import "helpers/form-elements";
+@import "helpers/animations";
+@import "helpers/tooltipster";
+@import "helpers/dropdown";*/
+
+/* === Layout === */
+/*@import "layout/header/header";
+@import "layout/main/main";
+@import "helpers/_mCustomScrollbar";*/
+
+@import "_reset-src.scss";
+
+html {
+	background: url(../images/background.jpg) no-repeat center center fixed; 
+	background-size: cover;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+
+.icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	&.ico-github {
+  		background: url(../images/icons/icon-github.svg);
+	}
+	&.ico-open-issue {
+  		background: url(../images/icons/icon-open-issue.svg);
+	}
+	&.ico-closed-issue {
+  		background: url(../images/icons/icon-closed-issue.svg);
+	}
+	&.ico-star-on {
+  		background: url(../images/icons/icon-star-on.svg);
+	}
+	&.ico-star-off {
+  		background: url(../images/icons/icon-star-off.svg);
+	}
+}
+
+
+#window {
+	display:block;
+	position: absolute;
+    top: 196px;
+    left: 137px;
+	width: 650px;
+	height: 500px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+	background: #f6f6f6;
+	.menu {
+		display: inline-block;
+		position: relative;
+		width: 150px;
+		height: 500px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		overflow: hidden;
+		background: url(../images/background.jpg) no-repeat center center fixed;
+		background-size: cover;
+		vertical-align: top;
+		&:before {
+			content: '';
+			width: 200px;
+			height: 550px;
+			background: inherit; 
+			position: absolute;
+			left: -25px;  //giving minus -25px left position
+			right: 0;
+			top: -25px;   //giving minus -25px top position 
+			bottom: 0;
+			box-shadow: inset 0 0 0 200px rgba(16,16,34,0.8);
+			filter: blur(5px);
+		}
+		.main {
+			position: relative;
+			width: 150px;
+			height: 40px;
+			padding: 13px;
+			background: #101022;
+			box-sizing: border-box;
+			span {
+				width: 10px;
+				height: 10px;
+				position: relative;
+				display: inline-block;
+				border-radius: 50%;
+				margin: 3px;
+				cursor: pointer;
+				&.red {
+					background: #ff594f;
+				}
+				&.yellow {
+					background: #ffbc1b;
+				}
+				&.green {
+					background: #00cd46;
+				}
+			}
+		}
+		ul {
+			position:relative;
+			color: white;
+			list-style-type: none;
+			li {
+				width: 150px;
+				height: 50px;
+				margin-top: 1px;
+				padding: 16px;
+				box-sizing: border-box;
+				font-size: 14px;
+				cursor: pointer;
+				&:hover{
+					background: #292a48;					
+				}
+				.text {
+					margin-left: 5px;
+				}
+				.count {
+					float: right;
+					font-size: 13px;
+					color: #8a8995;
+				}
+
+			}
+		}
+	}
+
+	.content {
+		display: inline-block;
+		height: 100%;
+		background: #f6f6f6;
+		overflow-y: scroll;
+		width: calc(100% - 155px);
+		ul {
+			li {
+				&.event{
+					padding: 10px;
+					margin: 10px;
+					background: white;
+					border: 1px solid #e0e0e0;
+					border-radius: 5px;
+					.icon.ico-star-on,
+					.icon.ico-star-off {
+						float: right;
+						cursor: pointer;
+					}
+				}
+				&.date {
+					margin: 10px;
+					font-size: 12px;
+					color: #8a8995;
+				}
+			}
+		}
+	}
+}
