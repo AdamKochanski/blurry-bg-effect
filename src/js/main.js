@@ -1,16 +1,17 @@
-var site = {
+'use strict';
 
+var app = {
   init: function() {
-    site.registerEvents();
+    app.favorites();
   },
-  registerEvents: function() {
-    $('.back-to-top').on('click', site.scrollToTop);
+  favorites: function() {
+    $('#github-window').find('.content .ico-star').on('click', app.iconToggler);
   },
-  scrollToTop: function() {
-    $('body').animate({scrollTop: 0}, 400);
+  iconToggler: function() {
+    $(this).toggleClass('active');
   }
 };
 
 $(function() {
-  site.init();
+  app.init();
 });
