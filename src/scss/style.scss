@@ -49,20 +49,19 @@ html {
 		border-top-left-radius: 10px;
 		border-bottom-left-radius: 10px;
 		overflow: hidden;
-		background: url(../images/background.jpg) no-repeat center center fixed;
-		background-size: cover;
 		vertical-align: top;
 		&:before {
 			content: '';
-			width: 200px;
-			height: 550px;
-			background: inherit; 
 			position: absolute;
-			left: -25px;  //giving minus -25px left position
+			width: 200px;
+			height: 550px; 
+			left: -25px;
 			right: 0;
-			top: -25px;   //giving minus -25px top position 
+			top: -25px;
 			bottom: 0;
 			box-shadow: inset 0 0 0 200px rgba(16,16,34,0.8);
+			background: url(../images/background.jpg) no-repeat center center fixed;
+			background-size: cover;
 			filter: blur(5px);
 		}
 		.main {
@@ -72,6 +71,7 @@ html {
 			padding: 13px;
 			background: #101022;
 			box-sizing: border-box;
+			border-top-left-radius: 10px; // for IE
 			span {
 				width: 10px;
 				height: 10px;
