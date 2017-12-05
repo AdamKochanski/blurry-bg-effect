@@ -1,7 +1,7 @@
-# el_passion_recruitment
+# blurry-bg-effect
 
 
-Issues: 
+TODO: 
 - missing font proxima nova regular (there is no free font)
 - no scrollbar formatting (instruction)
 - not sure about resizing method of this window
